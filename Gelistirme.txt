@@ -1,0 +1,24 @@
+KANAL STÜDYOSU (WINDOWS) · UYGULAMAYI CLAUDE İLE DEĞİŞTİRMEK
+
+Bu kurulumun bütün kodu bu klasörde (app\). Claude Code ile hem anlatabilir hem değiştirebilirsin.
+Önce uygulamayı KURULUM.txt'e göre kur ve bir kez aç (Claude Code da o sırada kurulmuş olur).
+
+1. Kurulum klasörünü Dosya Gezgini'nde aç (bu dosyanın olduğu klasör).
+2. Adres çubuğuna  powershell  yazıp Enter'a bas. Bu klasörde bir PowerShell penceresi açılır.
+3. claude  yaz, Enter. (İlk seferde aboneliğinle giriş yapman istenebilir: /login)
+4. Claude Code bu klasördeki CLAUDE.md rehberini kendisi okur. Ne istediğini Türkçe anlat, örneğin:
+   - "Bu uygulama nasıl çalışıyor, bana basitçe anlat."
+   - "Altyazı kutusunu biraz daha şeffaf yap."
+   - "Paketleme aşamasında 5 yerine 3 başlık önerisi olsun."
+5. Claude önce ne yapacağını anlatır; onaylarsan değiştirir ve testleri çalıştırır.
+6. Değişiklik bitince uygulamada sağ üstten Kapat de, sonra masaüstündeki kısayolla yeniden aç.
+
+İpuçları
+- İlk seferde Claude'a "değişiklikleri git ile takip et" de. Böylece beğenmediğin bir değişikliği geri alabilir.
+- Kanallarının içeriğine (Kanallar\ klasörü) ve ayarlarına (Sistem\) Claude izinsiz dokunmaz.
+- Büyük bir değişiklikten önce klasörün bir kopyasını almak her zaman iyi bir fikirdir.
+
+Claude sohbetinde (claude.ai) yalnız anlamak/soru sormak için
+- SPECS.md dosyası bütün tarifi ve kodun tamamını tek dosyada içerir (büyük bir dosya).
+- claude.ai'de bir Proje aç, SPECS.md'yi projenin dosyalarına yükle, sorularını o projede sor.
+- Sohbet dosyalarını kendisi değiştiremez; değişiklik için yukarıdaki Claude Code yolunu kullan.

@@ -1,0 +1,18 @@
+KANAL STÜDYOSU (WINDOWS) · KURULUM
+
+0. Zip'i açmadan önce: zip dosyasına sağ tık › Özellikler › alttaki "Engellemeyi kaldır" kutusunu işaretle › Tamam.
+   (İnternetten inen dosyalarda Windows her açılışta uyarı gösterir; bu adım onu önler.)
+1. Zip'i istediğin yere aç (ör. Belgeler\Kanal Stüdyosu). Uygulamanın bütün verisi bu klasörde durur:
+   Sistem\ (ayarlar, maliyet, kayıt) ve Kanallar\ (her kanalın klasörü).
+2. "1 - Ilk kurulum.cmd" dosyasına çift tıkla (bir kez). Eksik programları (Python, FFmpeg, ImageMagick) winget ile
+   kurar, istersen Claude Code'u kurar ve masaüstüne "Kanal Stüdyosu" kısayolu koyar.
+3. Claude Code'a aboneliğinle giriş yap: PowerShell'i aç, "claude" yaz, /login.
+4. CapCut: capcut.com adresinden CapCut'ın uluslararası (İngilizce) masaüstü sürümünü kur ve bir kez açıp kapat.
+   Çin sürümü JianYing kullanma (taslak dosyalarını şifreliyor).
+5. Masaüstündeki "Kanal Stüdyosu"na çift tıkla. İlk açılış ~1 dakika sürer (uygulama kendi kütüphanesini kurar).
+6. Ayarlar'da "Claude Code'u kontrol et", AI84 (seslendirme) anahtarını gir, sonra "+ Kanal ekle".
+7. Görseller için "kanal-studyosu-flow.zip" becerisini Claude masaüstü uygulamasına bir kez yükle
+   (Ayarlar › Beceriler › yükle).
+
+Klasörü taşımak istersen uygulamayı kapatıp klasörün tamamını taşı; masaüstü kısayolunu "1 - Ilk kurulum.cmd" ile yenile.
+Bu sürüm Mac sürümü 1.2.3'ten uyarlandı; Mac sürümündeki sonraki değişiklikler buraya kendiliğinden gelmez.

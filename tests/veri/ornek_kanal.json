@@ -1,0 +1,166 @@
+{
+  "ad": "Örnek Kanal (test)",
+  "kisaltma": "ornek-test",
+  "kod_oneki": "TEST-ORN",
+  "test": true,
+  "dil": {
+    "calisma": "tr",
+    "hedef": "it"
+  },
+  "uzunluk": {
+    "hedef_dk": 12,
+    "calisma_kelime": [
+      1600,
+      1800
+    ],
+    "hedef_kelime": [
+      1950,
+      2050
+    ],
+    "kart_karakter": 3500,
+    "hook_esigi": 9
+  },
+  "ses": {
+    "voice_id": "ornekSesKimligi0001",
+    "voice_name": "Örnek ses",
+    "model_id": "eleven_v3",
+    "language_code": "it",
+    "output_format": "mp3_44100_128",
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "speed": 1,
+    "use_speaker_boost": true
+  },
+  "gorsel": {
+    "karakter": "@Mira",
+    "kurallar": "- Görselde okunabilir yazı ya da logo olmaz.\n- Metafor ve şema sahnelerinde karakter yoktur; tek sembol ya da ok/şekil dili kullanılır.",
+    "ifade_notu": "@Mira ile başlayan promptlarda yüz ifadesini somut yaz (göz, kaş, ağız).",
+    "flow_model": "Nano Banana 2",
+    "oran": "16:9"
+  },
+  "etiketler": {
+    "senaryo": {
+      "karakter": "MIRA",
+      "metafor": "METAFOR",
+      "sema": "DIAGRAM",
+      "ilk30": "★30sn"
+    },
+    "ses": [
+      "calm",
+      "softly",
+      "warm",
+      "serious",
+      "hopeful",
+      "whispers"
+    ],
+    "ses_sinir": {
+      "whispers": 2
+    },
+    "tag_orani": 25
+  },
+  "montaj": {
+    "muzik": true,
+    "muzik_lufs": -38,
+    "son_ekran_sn": 8,
+    "maskot": {
+      "dosyalar": [
+        "Maskot_1_seffaf.mov",
+        "Maskot_2_seffaf.mov"
+      ],
+      "sira": [
+        "M1",
+        "M2",
+        "M1",
+        "M2"
+      ]
+    }
+  },
+  "hassas_kelimeler": [
+    "depress",
+    "trauma",
+    "ansia",
+    "panico"
+  ],
+  "kalip_sayaclari": {
+    "\"Forse…\"": "\\bForse\\b",
+    "\"A volte…\"": "\\bA volte\\b"
+  },
+  "imza": "Ci vediamo alla prossima.",
+  "onaylar": {
+    "konu": true,
+    "arastirma": true,
+    "senaryo": true,
+    "ceviri": true,
+    "paketleme": true
+  },
+  "isler": {
+    "konu": {
+      "model": "claude-sonnet-5-5",
+      "efor": "medium",
+      "web_arama": 6,
+      "max_token": 32000
+    },
+    "arastirma": {
+      "model": "claude-sonnet-5-5",
+      "efor": "medium",
+      "web_arama": 12,
+      "max_token": 64000
+    },
+    "senaryo": {
+      "model": "claude-opus-5-5",
+      "efor": "medium",
+      "max_token": 128000
+    },
+    "ceviri": {
+      "model": "claude-opus-5-5",
+      "efor": "medium",
+      "max_token": 128000
+    },
+    "sahne": {
+      "model": "claude-sonnet-5-5",
+      "efor": "medium",
+      "max_token": 128000
+    },
+    "paketleme": {
+      "model": "claude-opus-5-5",
+      "efor": "medium",
+      "max_token": 64000
+    },
+    "bolumler": {
+      "model": "claude-haiku-4-5",
+      "max_token": 8000
+    },
+    "bolumler_yedek": {
+      "model": "claude-sonnet-5-5",
+      "efor": "medium",
+      "max_token": 16000
+    },
+    "odak": {
+      "model": "claude-haiku-4-5",
+      "max_token": 4000
+    },
+    "odak_yedek": {
+      "model": "claude-sonnet-5-5",
+      "efor": "medium",
+      "max_token": 8000
+    },
+    "defter": {
+      "model": "claude-sonnet-5-5",
+      "efor": "medium",
+      "max_token": 64000
+    },
+    "uyum": {
+      "model": "claude-sonnet-5-5",
+      "efor": "medium",
+      "max_token": 16000
+    },
+    "rapor": {
+      "model": "claude-haiku-4-5",
+      "max_token": 4000
+    }
+  },
+  "butce": {
+    "video_usd": 8
+  }
+}

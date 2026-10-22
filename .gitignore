@@ -1,0 +1,7 @@
+# Kullanıcının verisi ve uygulamanın kendi ortamı takip edilmez
+Sistem/
+Kanallar/
+Silinecekler/
+__pycache__/
+*.pyc
+.DS_Store

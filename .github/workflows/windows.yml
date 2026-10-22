@@ -1,0 +1,32 @@
+name: Windows
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: FFmpeg ve ImageMagick
+        run: |
+          choco install ffmpeg imagemagick -y --no-progress
+          $im = Get-ChildItem 'C:\Program Files' -Directory -Filter 'ImageMagick*' | Select-Object -First 1
+          if ($im) { $im.FullName | Out-File -FilePath $env:GITHUB_PATH -Append -Encoding utf8 }
+      - name: Kütüphaneler
+        run: python -m pip install -r app/requirements.txt
+      - name: Testler
+        env:
+          PYTHONUTF8: '1'
+        run: python -m unittest discover -s tests -v
+      - name: Başlatıcı denemesi
+        shell: powershell
+        run: |
+          $d = Join-Path $env:RUNNER_TEMP ('Kanal St' + [char]0xFC + 'dyosu')
+          Copy-Item . $d -Recurse
+          powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $d 'app\windows\baslat.ps1')
+          for ($i = 0; $i -lt 60; $i++) { if (Test-Path "$d\Sistem\calisan.json") { break }; Start-Sleep 5 }
+          $c = Get-Content "$d\Sistem\calisan.json" | ConvertFrom-Json
+          $r = Invoke-RestMethod -Uri "http://127.0.0.1:$($c.port)/api/durum" -Headers @{ 'X-App-Token' = $c.token }
+          "Surum: $($r.surum)"
+          Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:$($c.port)/api/kapat" -Headers @{ 'X-App-Token' = $c.token } -ContentType 'application/json' -Body '{}'

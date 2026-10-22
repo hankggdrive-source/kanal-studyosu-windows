@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kanal Stüdyosu</title>
+<link rel="stylesheet" href="/stil.css">
+<script>window.TOKEN = "__TOKEN__";</script>
+</head>
+<body>
+<header class="ust">
+  <div class="marka"><span class="logo">K</span><span>Kanal Stüdyosu</span></div>
+  <div class="ust-sag">
+    <button id="bakiye" class="maliyet bakiye" data-eylem="bakiye" title="Kalan bakiye · tıkla: yenile" hidden></button>
+    <div id="maliyet" class="maliyet" title="Tahmini API harcaması"></div>
+    <div class="kanal-sec" id="kanal-sec"></div>
+    <button class="dugme ince" data-eylem="kanal-ekle">+ Kanal ekle</button>
+    <button class="dugme ince" data-eylem="ayarlar">Ayarlar</button>
+    <button class="dugme ince" data-eylem="kayit">Kayıt</button>
+    <button class="dugme ince tehlike" data-eylem="kapat">Kapat</button>
+  </div>
+</header>
+<main id="ana" class="ana"><p class="soluk">Yükleniyor…</p></main>
+
+<dialog id="buyuk-pencere" class="pencere buyuk-pencere">
+  <div class="satir" style="justify-content:space-between;margin-bottom:8px"><strong id="buyuk-baslik">Metin</strong>
+    <div class="satir" style="gap:6px"><button class="dugme ince" data-eylem="buyuk-kopyala">Kopyala</button>
+    <button class="dugme ince" data-eylem="buyuk-kapat">Kapat</button></div></div>
+  <pre id="buyuk-icerik"></pre>
+</dialog>
+<dialog id="kanal-pencere" class="pencere buyuk-pencere"><div id="kanal-formu"></div></dialog>
+<dialog id="ayar-penceresi" class="pencere"><form method="dialog" id="ayar-formu"></form></dialog>
+<dialog id="sil-pencere" class="pencere"><div id="sil-icerik"></div></dialog>
+<dialog id="dosya-pencere" class="pencere buyuk-pencere"><div id="dosya-icerik"></div></dialog>
+
+<aside id="kayit-paneli" class="kayit-paneli" hidden>
+  <div class="kayit-baslik"><strong>Kayıt</strong>
+    <div class="satir" style="gap:6px">
+      <label class="kucuk soluk" style="display:flex;align-items:center;gap:4px;margin:0"><input type="checkbox" id="kayit-hata"> Yalnız hata/uyarı</label>
+      <button class="dugme ince" data-eylem="kayit-kopyala">Kopyala</button>
+      <button class="dugme ince" data-eylem="kayit-son-hata">Son hatayı kopyala</button>
+      <button class="dugme ince" data-eylem="kayit-dosya" title="Bütün geçmiş, uygulama kapansa da silinmez">Tüm geçmişi aç</button>
+      <button class="dugme ince" data-eylem="kayit-buyut">Büyüt</button>
+      <button class="dugme ince" data-eylem="kayit">Kapat</button></div></div>
+  <pre id="kayit-icerik"></pre>
+  <div id="kayit-asagi" class="kayit-asagi" hidden><button class="dugme ince" data-eylem="kayit-en-alt">↓ En yeni satırlar</button></div>
+</aside>
+<div id="bildirim" class="bildirim" hidden></div>
+<script src="/app.js"></script>
+</body>
+</html>

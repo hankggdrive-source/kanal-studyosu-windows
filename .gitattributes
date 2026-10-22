@@ -1,0 +1,5 @@
+*.ps1 -text
+*.cmd -text
+*.vbs -text
+*.zip binary
+*.jpg binary
